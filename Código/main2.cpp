@@ -1,6 +1,6 @@
      //////////////////////////
     //   Trabalho Final	    //
-   // Programação aplicada //
+   // ProgramaÃ§Ã£o aplicada //
   //    Lorenzo Xavier    //
  //       2020101577     //
 //////////////////////////
@@ -10,7 +10,7 @@
 #include <iostream>
 #include "menu.h"
 
-// Chama a função principal
+// Chama a funÃ§Ã£o principal
 int main()
 {
 	
