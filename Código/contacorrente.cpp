@@ -28,7 +28,7 @@ void ContaCorrente::mostrarDados( )
 	
 }
 
-// Adiciona um valor double à conta
+// Adiciona um valor double Ã  conta
 void ContaCorrente::depositar( double valor )
 {
 	//std::cout << "\t->depositar() " << std::endl;
@@ -38,7 +38,7 @@ void ContaCorrente::depositar( double valor )
 	std::cout << "\t--->Operacao aprovada.. \n"<< std::endl;
 }
 
-// Retira um valor double à conta
+// Retira um valor double Ã  conta
 int ContaCorrente::sacar( double valor )
 {
 	//std::cout << "\t->sacar() conta corrente" << std::endl;
