@@ -29,7 +29,7 @@ void ContaPoupanca::mostrarDados( )
 	
 }
 
-// Adiciona um valor double à conta
+// Adiciona um valor double Ã  conta
 void ContaPoupanca::depositar( double valor )
 {
 	//std::cout << "\t->depositar() conta poupanca " << std::endl;
@@ -40,7 +40,7 @@ void ContaPoupanca::depositar( double valor )
 	
 }
 
-// Retira um valor double à conta
+// Retira um valor double Ã  conta
 int ContaPoupanca::sacar( double valor )
 {
 	//std::cout << "\t->sacar() conta poupanca " << std::endl;
