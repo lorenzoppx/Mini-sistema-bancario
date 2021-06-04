@@ -1,0 +1,4 @@
+g++ main.cpp imprimivel.cpp contabancaria.cpp contacorrente.cpp contapoupanca.cpp relatorio.cpp executavel.cpp banco.cpp menu.cpp -o main.exe
+
+
+g++ main2.cpp imprimivel.cpp contabancaria.cpp contacorrente.cpp contapoupanca.cpp relatorio.cpp executavel.cpp banco.cpp menu.cpp -o main2.exe
