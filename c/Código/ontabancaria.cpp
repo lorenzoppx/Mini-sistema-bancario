@@ -20,7 +20,7 @@ ContaBancaria::~ContaBancaria( )
 	
 }
 
-// Transferencia da conta atual para uma conta receptora que é argumento do método
+// Transferencia da conta atual para uma conta receptora que Ã© argumento do mÃ©todo
 void ContaBancaria::transferir( double valor, ContaBancaria* ContaReceptora )
 {
 	//std::cout << std::endl << "\t->transferir ContaBancaria() " << std::endl << std::endl;
@@ -41,7 +41,7 @@ void ContaBancaria::transferir( double valor, ContaBancaria* ContaReceptora )
 	
 }
 
-// Retorna a conta, que é um dado protected
+// Retorna a conta, que Ã© um dado protected
 int ContaBancaria::get_conta( ) const
 {
 	
