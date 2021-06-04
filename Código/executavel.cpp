@@ -30,7 +30,7 @@ Executavel::Executavel( )
     std::cout << "\t----------Deposito na ContaCorrente----------" << std::endl;
     pessoal.depositar( 50 );
     
-	// Imprimi relatório
+	// Imprimi relatÃ³rio
 	mostrar.gerarRelatorio( &pessoal );
 	mostrar.gerarRelatorio( &empresarial );
 	
@@ -40,7 +40,7 @@ Executavel::Executavel( )
     std::cout << "\t----------Saca na ContaCorrente----------" << std::endl;
     empresarial.sacar( 50 );
 	
-	// Imprimi relatório
+	// Imprimi relatÃ³rio
 	mostrar.gerarRelatorio( &pessoal );
 	mostrar.gerarRelatorio( &empresarial );
 	
