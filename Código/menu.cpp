@@ -8,11 +8,11 @@
 #include "banco.h"
 #include "relatorio.h"
 
-// Contem o loop que chama Entrada() atÈ que seu retorno seja igual a 5
+// Contem o loop que chama Entrada() at√© que seu retorno seja igual a 5
 void Menu::Start( )
 {
 	
-	// Usando o operador * para pegar a inst‚ncia atual
+	// Usando o operador * para pegar a inst√¢ncia atual
 	while( (*this).Entrada() != 5 ){}
 	
 }
@@ -21,10 +21,10 @@ void Menu::Start( )
 int Menu::Entrada( )
 {
 	
-	// Declara vari·vel local
+	// Declara vari√°vel local
 	int input = 0;
 	
-	// Interface entrada-saÌda
+	// Interface entrada-sa√≠da
 	std::cout << std::endl;
 	std::cout << "\t------------------------------" << std::endl;
 	std::cout << "\t-------------Menu-------------" << std::endl;
@@ -38,7 +38,7 @@ int Menu::Entrada( )
 	std::cout << std::endl << "\t------------FimMenu-----------" << std::endl << std::endl;
 	std::cout << std::endl;
 	
-	// O switch chama cada respectiva opcao caso ela for v·lida
+	// O switch chama cada respectiva opcao caso ela for v√°lida
 	switch( input )
 	{
 		case 0:
@@ -67,15 +67,15 @@ int Menu::Entrada( )
 	return input;
 }
 
-// Primeira opc„o
+// Primeira opc√£o
 void Menu::Opcao1( )
 {
 	//std::cout << "\t->Opcao1()" << std::endl;
 	
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	int input = 0;
 	
-	// Interface entrada-saÌda
+	// Interface entrada-sa√≠da
 	std::cout << "\t------------------------------" << std::endl;
 	std::cout << "\t---------Criar conta----------" << std::endl;
 	std::cout << "\t------------------------------" << std::endl << std::endl;
@@ -112,24 +112,24 @@ void Menu::Opcao1( )
 	
 }
 
-// Segunda opc„o
+// Segunda opc√£o
 void Menu::Opcao2( )
 {
 	//std::cout << "\t->Opcao2()" << std::endl;
 	
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	int NumeroConta = 0;
 	
 	NumeroConta = Menu::validaNumeroConta( );
 	ContaBancaria* pointer = banco.procurarConta( NumeroConta );
 	
-	// Testa se o ponteiro È diferente de NULL
+	// Testa se o ponteiro √© diferente de NULL
 	if( pointer )
     {
     	std::cout << std::endl << "\t->Conta encontrada.." << std::endl << std::endl;
 		while( Menu::Selecionar( pointer )!=5 )
 		{
-			// A opÁ„o 5 faz com que o loop se encerre e volte ao menu principal
+			// A op√ß√£o 5 faz com que o loop se encerre e volte ao menu principal
 		}
 	}
 	
@@ -140,18 +140,18 @@ void Menu::Opcao2( )
 	
 }
 
-// Terceira opc„o
+// Terceira opc√£o
 void Menu::Opcao3( )
 {
 	//std::cout << "\t->Opcao3()" << std::endl;	
 	
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	int NumeroConta = 0;
 	
 	NumeroConta = validaNumeroPositivoInt("\tInforme o numero da conta: ");
 	ContaBancaria* pointer = banco.procurarConta( NumeroConta );
 	
-	// Testa se o ponteiro È diferente de NULL
+	// Testa se o ponteiro √© diferente de NULL
 	if( pointer )
 	{
 		banco.remover( pointer );
@@ -162,7 +162,7 @@ void Menu::Opcao3( )
 	}
 }
 
-// Quarta opÁ„o
+// Quarta op√ß√£o
 void Menu::Opcao4( )
 {
 	//std::cout << "\t->Opcao4()" << std::endl;
@@ -172,7 +172,7 @@ void Menu::Opcao4( )
 	
 }
 
-// Quinta opÁ„o
+// Quinta op√ß√£o
 void Menu::Opcao5( )
 {
 	//std::cout << "\t->Opcao5()" << std::endl;
@@ -181,10 +181,10 @@ void Menu::Opcao5( )
 // Submenu selecionar
 int Menu::Selecionar( ContaBancaria *pointer )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	int input = 0;
 	
-	// Interface entrada-saÌda
+	// Interface entrada-sa√≠da
 	std::cout << "\t------------------------------" << std::endl;
 	std::cout << "\t----------Selecionar----------" << std::endl;
 	std::cout << "\t------------------------------" << std::endl << std::endl;
@@ -226,21 +226,21 @@ int Menu::Selecionar( ContaBancaria *pointer )
 	return input;
 }
 
-// Recebe uma passagem por referÍncia de ContaCorrente e realiza a respectiva operaÁ„o
+// Recebe uma passagem por refer√™ncia de ContaCorrente e realiza a respectiva opera√ß√£o
 int Menu::CriarContaCorrente( ContaCorrente &conta_input )
 {
-	// DeclaraÁ„o vari·veis locais
+	// Declara√ß√£o vari√°veis locais
 	int NumeroConta = 0;
 	double SaldoConta = 0;
 	double TaxaDeOperacaoConta = 0;
 	
-	// Interface entrada-saÌda
+	// Interface entrada-sa√≠da
 	std::cout << "\t------------------------------" << std::endl;
 	std::cout << "\t------CriarContaCorrente------" << std::endl;
 	std::cout << "\t------------------------------" << std::endl << std::endl;
     NumeroConta = Menu::validaNumeroConta( );
     
-    // Testa se n„o existe uma conta com o numero informado
+    // Testa se n√£o existe uma conta com o numero informado
     if( !banco.procurarConta( NumeroConta ) )
     {
         SaldoConta = Menu::validaSaldoConta( );
@@ -248,33 +248,33 @@ int Menu::CriarContaCorrente( ContaCorrente &conta_input )
 		std::cout << std::endl << "\t---------FimCriarContaCorrente--------" << std::endl << std::endl;
 		ContaCorrente conta_output( NumeroConta, SaldoConta, TaxaDeOperacaoConta );
 		
-		// Modifica o valor atravÈs da passagem por referÍncia
+		// Modifica o valor atrav√©s da passagem por refer√™ncia
 		conta_input = conta_output;
 		
-		// Retorna 1 caso a criaÁ„o de conta foi bem concluida com sucesso
+		// Retorna 1 caso a cria√ß√£o de conta foi bem concluida com sucesso
 		return 1;
 	}
 	std::cout << std::endl << "\t->Ja existe uma conta com o numero informado.." << std::endl << std::endl;
 
-	// Retorna 0 caso a criaÁ„o de conta n„o foi concluida com sucesso
+	// Retorna 0 caso a cria√ß√£o de conta n√£o foi concluida com sucesso
 	return 0;
 }
 
-// Recebe uma passagem por referÍncia de ContaPoupanca e realiza a respectiva operaÁ„o
+// Recebe uma passagem por refer√™ncia de ContaPoupanca e realiza a respectiva opera√ß√£o
 int Menu::CriarContaPoupanca( ContaPoupanca &conta_input )
 {
-	// DeclaraÁ„o vari·veis locais
+	// Declara√ß√£o vari√°veis locais
 	int NumeroConta = 0;
 	double SaldoConta = 0;
 	double LimiteDeCreditoConta = 0;
 	
-	// Interface entrada-saÌda
+	// Interface entrada-sa√≠da
 	std::cout << "\t------------------------------" << std::endl;
 	std::cout << "\t------CriarContaPoupanca------" << std::endl;
 	std::cout << "\t------------------------------" << std::endl << std::endl;
 	NumeroConta = Menu::validaNumeroConta( );
 
-	// Testa se n„o existe uma conta com o numero informado
+	// Testa se n√£o existe uma conta com o numero informado
 	if( !banco.procurarConta( NumeroConta ) )
     {
 	    SaldoConta = Menu::validaSaldoConta( );
@@ -283,25 +283,25 @@ int Menu::CriarContaPoupanca( ContaPoupanca &conta_input )
 		std::cout << std::endl << "\t---------FimCriarContaPoupanca--------" << std::endl << std::endl;
 		ContaPoupanca conta_output( NumeroConta, SaldoConta, LimiteDeCreditoConta );
 		
-		// Modifica o valor atravÈs da passagem por referÍncia
+		// Modifica o valor atrav√©s da passagem por refer√™ncia
 		conta_input = conta_output;
 		
-		// Retorna 1 caso a criaÁ„o de conta foi bem concluida com sucesso
+		// Retorna 1 caso a cria√ß√£o de conta foi bem concluida com sucesso
 		return 1;
 	}
 	std::cout << std::endl << "\t->Ja existe uma conta com o numero informado.." << std::endl << std::endl;
 
-	// Retorna 0 caso a criaÁ„o de conta n„o foi concluida com sucesso
+	// Retorna 0 caso a cria√ß√£o de conta n√£o foi concluida com sucesso
 	return 0;
 }
 
-// Recebe um ponteiro de ContaBancaria e realiza a respectiva operaÁ„o
+// Recebe um ponteiro de ContaBancaria e realiza a respectiva opera√ß√£o
 void Menu::Deposito( ContaBancaria *pointer )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	double deposito = 0;
 	
-	// Testa se o ponteiro È diferente de NULL
+	// Testa se o ponteiro √© diferente de NULL
 	if( pointer )
     {
     	deposito = Menu::validaNumeroPositivoDouble("\tInforme o valor a ser depositado: ");
@@ -310,13 +310,13 @@ void Menu::Deposito( ContaBancaria *pointer )
     
 } 
 
-// Recebe um ponteiro de ContaBancaria e realiza a respectiva operaÁ„o
+// Recebe um ponteiro de ContaBancaria e realiza a respectiva opera√ß√£o
 void Menu::Saque( ContaBancaria *pointer )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	double saque = 0;
 	
-	// Testa se o ponteiro È diferente de NULL
+	// Testa se o ponteiro √© diferente de NULL
 	if( pointer )
     {
 		saque = Menu::validaNumeroPositivoDouble( "\tInforme o valor a ser sacado: " );
@@ -325,14 +325,14 @@ void Menu::Saque( ContaBancaria *pointer )
     
 }
 
-// Recebe um ponteiro de ContaBancaria e realiza a respectiva operaÁ„o
+// Recebe um ponteiro de ContaBancaria e realiza a respectiva opera√ß√£o
 void Menu::Transfere( ContaBancaria *pointer )
 {
-	// DeclaraÁ„o vari·veis locais
+	// Declara√ß√£o vari√°veis locais
 	double transfere = 0;
 	int NumeroContaDestino = 0;
 	
-	// Testa se o ponteiro È diferente de NULL
+	// Testa se o ponteiro √© diferente de NULL
 	if( pointer )
     {
         NumeroContaDestino = Menu::validaNumeroPositivoInt("\tInforme a conta de destino: ", 9);
@@ -355,7 +355,7 @@ void Menu::Transfere( ContaBancaria *pointer )
 // Exibe uma mensagem e chama o respectivo validador passando um limite fixo de caracteres, depois retorna o valor validado
 int Menu::validaNumeroConta( )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	int NumeroConta = 0;
 	NumeroConta = Menu::validaNumeroPositivoInt("\tInforme o numero da conta: ", 9);
 	
@@ -365,7 +365,7 @@ int Menu::validaNumeroConta( )
 // Exibe uma mensagem e chama o respectivo validador, depois retorna o valor validado
 double Menu::validaSaldoConta( )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	double SaldoConta = 0;
 	SaldoConta = Menu::validaNumeroPositivoDouble("\tInforme o saldo da conta: ");
 	
@@ -375,7 +375,7 @@ double Menu::validaSaldoConta( )
 // Exibe uma mensagem e chama o respectivo validador, depois retorna o valor validado
 double Menu::validaTaxaDeOperacao( )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	double TaxaDeOperacaoConta = 0;
 	TaxaDeOperacaoConta = Menu::validaNumeroPositivoDouble("\tInforme a taxa de operacao: ");
 	
@@ -385,7 +385,7 @@ double Menu::validaTaxaDeOperacao( )
 // Exibe uma mensagem e chama o respectivo validador, depois retorna o valor validado
 double Menu::validaLimiteDeCredito( )
 {
-	// DeclaraÁ„o vari·vel local
+	// Declara√ß√£o vari√°vel local
 	double LimiteDeCreditoConta = 0;
 	LimiteDeCreditoConta = Menu::validaNumeroPositivoDouble("\tInforme o limite de credito: ");
 	
@@ -407,11 +407,11 @@ int Menu::validaNumeroPositivoInt( const std::string txt, int limite )
 		// Seta as variaveis utilizadas abaixo
 		trava = 0;
 		
-		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu·rio
+		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu√°rio
 	    std::cout << txt;
 		std::cin >> input;
 		
-		// Testa se o tamanho da string È igual ao limite fixo setado
+		// Testa se o tamanho da string √© igual ao limite fixo setado
 		if ( input.size() == limite )
 		{
 			//Testa se a string e composta somente por numeros
@@ -442,13 +442,13 @@ int Menu::validaNumeroPositivoInt( const std::string txt, int limite )
 			std::cout << std::endl << "\tO numero da conta possui 9 algarismos.." << std::endl << std::endl;
 		}
 		
-		// Testa se a trava n„o foi acionada e testa se o numero È nulo
+		// Testa se a trava n√£o foi acionada e testa se o numero √© nulo
 		if( trava == 0)
 		{
 			// Converte uma string para inteiro
 			NumeroPositivo = std::stoi(input);
 			
-			// Testa se o numero informado È nulo
+			// Testa se o numero informado √© nulo
 			if( NumeroPositivo == 0 )
 			{
 				trava = 1;
@@ -477,7 +477,7 @@ int Menu::validaNumeroPositivoInt( const std::string txt )
 		// Seta as variaveis utilizadas abaixo
 		trava = 0;
 		
-		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu·rio
+		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu√°rio
 	    std::cout << txt;
 		std::cin >> input;
 
@@ -502,13 +502,13 @@ int Menu::validaNumeroPositivoInt( const std::string txt )
 			std::cout << std::endl << "\tValor invalido.." << std::endl << std::endl;
 		}
 		
-		// Testa se a trava n„o foi acionada e testa se o numero È nulo
+		// Testa se a trava n√£o foi acionada e testa se o numero √© nulo
 		if( trava == 0)
 		{
 			// Converte uma string para inteiro
 			NumeroPositivo = std::stoi(input);
 			
-			// Testa se o numero informado È nulo
+			// Testa se o numero informado √© nulo
 			if( NumeroPositivo == 0 )
 			{
 				trava = 1;
@@ -539,7 +539,7 @@ double Menu::validaNumeroPositivoDouble( const std::string txt )
 		trava = 0;
 		ponto = 0;
 		
-		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu·rio
+		// Exibe a string recebida como argumento constante e recebe um valor digitado pelo usu√°rio
 	    std::cout << txt;
 		std::cin >> input;
 		
@@ -551,7 +551,7 @@ double Menu::validaNumeroPositivoDouble( const std::string txt )
 			if( input[i] == '.' )
 			{
 				ponto++;
-				// Se a string possuir mais de dois pontos a trava È acionada
+				// Se a string possuir mais de dois pontos a trava √© acionada
 				if( ponto>=2 )
 				{
 					// Aciona a trava
@@ -577,13 +577,13 @@ double Menu::validaNumeroPositivoDouble( const std::string txt )
 			std::cout << std::endl << "\tValor invalido.." << std::endl << std::endl;
 		}
 		
-		// Testa se a trava n„o foi acionada e testa se o numero È nulo
+		// Testa se a trava n√£o foi acionada e testa se o numero √© nulo
 		if( trava == 0)
 		{
 			// Converte uma string para double
 			NumeroPositivo = std::stod( input );
 			
-			// Testa se o numero informado È nulo
+			// Testa se o numero informado √© nulo
 			if( NumeroPositivo == 0 )
 			{
 				trava = 1;
